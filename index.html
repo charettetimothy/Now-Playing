@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Now Playing</title>
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/css/foundation.min.css"
+        integrity="sha256-VEEaOnBKVRoYPn4AID/tY/XKVxKEqXstoo/xZ6nemak= sha384-D46t32f421/hB30qwnim2pIcisNN5GU9+6m2Mfnd3dKpTSFidZLa08/1StEiCFId sha512-WkgzH8VKemDfwrp18r+wgbx+oHXOkfd2kJs7ocAXdGDgonXDXh88E90IRtRZRXtO0IHprxYHYlY14h+wyTsUDA=="
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet">
+    <!-- Compressed JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/js/foundation.min.js" integrity="sha256-GZq6aeugpWo25iH//1eKmeK6FHCf+6KXTfoUpkCqPCA= sha384-vjxUQtbGw5FJMigaaFpXYyxoHHLb7LbvRywnMZOiPJeh5j9sl2rnmQ3iucuegRm8 sha512-h7tIMIX/opZXfWkcTDbkO+nT0LePyAAwDacfYhWtgGUidV+Kkh3eesW52fPSxKEsw3rgywKhQvghNLT4eDuUyw=="
+        crossorigin="anonymous"></script>
+
+ 
+</head>
+
+<body>
+    <!-- This demo uses float grid but you can use flex grid too -->
+
+    <div class="top-bar-container" data-sticky-container>
+        <div class="sticky sticky-topbar" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
+            <div class="top-bar">
+                <div class="top-bar-left">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                        <a href="https://annstein29.github.io/Project-1/" class="menu-text">Now Playing</a>
+                        <li class="has-submenu">
+                            <a href="#">Genres</a>
+                            <ul class="submenu menu vertical" data-submenu>
+                                <li><a href="#" class="genre" id="28">Action</a></li>
+                                <li><a href="#" class="genre" id="12">Adventure</a></li>
+                                <li><a href="#" class="genre" id="16">Animation</a></li>
+                                <li><a href="#" class="genre" id="35">Comedy</a></li>
+                                <li><a href="#" class="genre" id="80">Crime</a></li>
+                                <li><a href="#" class="genre" id="18">Drama</a></li>
+                                <li><a href="#" class="genre" id="10751">Family</a></li>
+                                <li><a href="#" class="genre" id="14">Fantasy</a></li>
+                                <li><a href="#" class="genre" id="36">History</a></li>
+                                <li><a href="#" class="genre" id="10402">Music</a></li>
+                                <li><a href="#" class="genre" id="10749">Romance</a></li>
+                                <li><a href="#" class="genre" id="878">Science Fiction</a></li>
+                                <li><a href="#" class="genre" id="53">Thriller</a></li>
+                            </ul>
+                        </li>
+                       
+                        <li><button type="button" class="button" id="pullDown">In Theatres near me</button></li>
+                        <li><a href="https://github.com/annstein29/Project-1">GitHub Repo</a></li>
+                    </ul>
+                </div>
+                <div class="top-bar-right">
+
+                    <ul class="menu">
+                        <li><input type="text" class="form-control" id="searchMovie" placeholder="Search Movies"></li>
+                        <li><button type="button" class="button" id="movieSearchBtn">Search</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Displaying the movies -->
+    <div class="container">
+        <div class="row">
+            <div class="genreLabel">
+                <h1 id="movieGenreLabel"></h1>
+                <!-- I need the h1 to change accordingly depending on what was clicked. -->
+            </div>
+
+            <div id="panel" style="display:none">
+                <div id="zip">
+                    <input type="number" class="form-control" id="zipSearch" placeholder="Enter your Zip Code" required>
+                    <input type="text" class="form-control" id="datepicker"  min="2018-11-08" max="2018-12-31" placeholder="Select Date">
+                    <button type="button" class="button" id="zipCode">Search Zip</button><p id="demo"></p></div>
+                    
+                  
+            </div>
+
+           
+         <table id="movie-list" style="display:none" ></table>
+           
+
+
+
+            <div id="movie-grid">
+
+                <!-- Jquery get us the movie posters! Need a place to put the poster images -->
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+        <div class="columns">
+            <div class="reveal" id="exampleModal9" data-reveal data-overlay="false">
+                
+                <button class="close-button" data-close aria-label="Close reveal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Video -->
+    <div class="row">
+        <div class="columns">
+            <div class="reveal" id="exampleModal8" data-reveal data-overlay="false">
+                <button class="close-button" data-close aria-label="Close reveal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- </div> -->
+
+
+
+    <footer>
+        <!-- <div class="row"></div> -->
+        <p class="team">Created by: Team Anna</p>
+        <p class="copyright">&copy;2018</p>
+        <!-- </div> -->
+    </footer>
+</body>
+
+
+<script>
+    $(document).foundation();
+</script>
+  <!-- Link to Moment.js should go here -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<!-- <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script> -->
+
+<script src="javascript/app.js"></script>
+</html>
