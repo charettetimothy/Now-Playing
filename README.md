@@ -1,4 +1,4 @@
-# Now Playing
+# Now Playing - https://charettetimothy.github.io/Now-Playing/
 The Now Playing app was created to showcase all currently playing movies as well as movies that were previously in theaters.
 
 If you are interested in finding movies currently in theaters near you, you can interact with the app and put your zip code into our theater finder.
